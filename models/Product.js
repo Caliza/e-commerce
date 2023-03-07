@@ -15,6 +15,10 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {model: 'category', key: 'id'},
+    },
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
