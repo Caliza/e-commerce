@@ -3,11 +3,11 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
-const { belongsTo } = require('./Product');
+
 
 // Products belongsTo Category
-belongsTo(Category, {
-  onDelete: 'Set Null',
+Product.belongsTo(Category, {
+ // onDelete: 'Set Null',
   foreignKey: 'category_id'
 });
 // Categories have many Products
