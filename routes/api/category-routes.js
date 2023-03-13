@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
   // find one category by its `id` value
   Category.findOne(
     {
-      where: { 
+      where: {
         id: req.params.id
       },
     }
@@ -28,9 +28,9 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // create a new category
   Category.create(req.body)
-  .then((categoryData) => {
-    res.json(categoryData);
-  });
+    .then((categoryData) => {
+      res.json(categoryData);
+    });
 });
 
 router.put('/:id', (req, res) => {
@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
     // Sends the updated Category as a json response
     res.json(updatedCategory);
   })
-  .catch((err) => res.json(err));
+    .catch((err) => res.json(err));
 });
 
 router.delete('/:id', (req, res) => {
