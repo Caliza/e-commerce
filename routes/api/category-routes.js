@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
+  // be sure to include its associated Products
   Category.findOne(
     {
       where: {
@@ -29,7 +30,7 @@ router.get('/:id', (req, res) => {
   ).then((categoryData) => {
     res.json(categoryData);
   });
-  // be sure to include its associated Products
+
 });
 
 router.post('/', (req, res) => {
