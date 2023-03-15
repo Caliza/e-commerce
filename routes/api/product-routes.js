@@ -7,7 +7,12 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/', (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
-  Product.findAll().then((productData) => {
+  Product.findAll({
+    include: [
+      {model: Category},{model: Tag, through: ProductTag}
+      
+    ],
+  }).then((productData) => {
     res.json(productData);
   });
 });
@@ -22,11 +27,8 @@ router.get('/:id', (req, res) => {
         id: req.params.id
       },
       include: [
-        Category,
-        {
-          model: Tag,
-          through: ProductTag,
-        },
+        {model: Category},{model: Tag, through: ProductTag}
+        
       ],
     }).then((productData) => {
       res.json(productData);
@@ -37,6 +39,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
+      category_id: 1,
       product_name: "Basketball",
       price: 200.00,
       stock: 3,
