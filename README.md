@@ -15,26 +15,27 @@
 
 ## Description
 
-- My motivation was to create an terminal application that a user could manage an employe database and organize it by department, role, salary, etc.
-- I built this project to learn mysql and expand my knowledge in javasript and node.js and how to more efficiently use command-line features.
-- It allows user to create a database with as many departments, roles, and employees. It also allow user to update an employee from a worker to a manager.
-- Learned how to write schema.sql and seeds.sql and db.query to manipulate database files.
+- My motivation was to create a back-end code so thata user could create, update, delete data in Insomnia without using the browser.
+- I built this project to learn how to use Insomnia and expand my knowledge with endpoints such as get, post, put, and delete requests.
+- It allows user to manage the backend of thier e-commerce company by managing and making any updates to their inventory.
+- Learned how to write api endpoints and test them using Insomnia.
 
 ## Installation
 
 - Clone code from GitHub repository:
 - Open in VS Code and command-line terminal.
-- Start mysql and SOURCE scheema.sql and seeds.sql.
-- Exit mysql an type 'node index.js' to start application. 
+- Start mysql and SOURCE scheema.sql.
+- Exit mysql an type 'node server.js' to start server. 
+- Open Insomnia to manage inventory.
 
 ## Usage
   
- - After typing 'node index.js' in command-line terminal, the menu prompt will appear where user can select from choices to premorm various tasks.
+ - After typing 'node index.js' in command-line terminal, open Insomnia and use url to manage products, categories, and tag data.
 
 
 
     
- ![employeeTracker](./assets/images/employeeTracker.jpg)
+ ![e-commerce](./assets/images/e-commerce.jpg)
 
 ## Links
 
