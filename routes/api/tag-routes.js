@@ -43,18 +43,18 @@ router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
   Tag.update(
     {
-      id: req.body.id,
+      // id: req.body.id,
       tag_name: req.body.tag_name,
     },
     {
       where: {
-      id: id.params.body,
+        id: req.params.id,
       },
     }
   ).then((updateData) => {
     res.json(updateData);
   })
-  .catch((err) => res.json(err));
+    .catch((err) => res.json(err));
 });
 
 router.delete('/:id', (req, res) => {
@@ -64,9 +64,9 @@ router.delete('/:id', (req, res) => {
       id: id.params.id,
     },
   })
-  .then((deletedTag) => {
-    res.json(deletedTag);
-  }).catch((err) => res.json(err));
+    .then((deletedTag) => {
+      res.json(deletedTag);
+    }).catch((err) => res.json(err));
 });
 
 module.exports = router;
